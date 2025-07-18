@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="ISO-8859-1">
+    <title>DigiPanchayat Dashboard</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            display: flex;
+            min-height: 100vh;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            width: 260px;
+            background: linear-gradient(180deg, #000000, #424242);
+            color: white;
+            padding: 30px 20px;
+            position: fixed;
+            height: 100vh;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.3);
+        }
+
+        .sidebar h2 {
+            text-align: center;
+            font-size: 22px;
+            margin-bottom: 50px;
+        }
+
+        .sidebar a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 12px 16px;
+            margin: 10px 0;
+            background-color: rgba(255, 255, 255, 0.05);
+            border-left: 4px solid transparent;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        .sidebar a:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-left: 4px solid #64b5f6;
+        }
+
+        /* Main content */
+        .main-content {
+            margin-left: 260px;
+            flex: 1;
+            height: 100vh;
+            background: linear-gradient(to bottom right, #0f2027, #203a43, #2c5364);
+            display: flex;
+            flex-direction: column;
+            color: #ffffff;
+        }
+
+        .header {
+            padding: 30px;
+        }
+
+        .header h1 {
+            font-size: 32px;
+            color: #00bcd4;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            font-size: 18px;
+            color: #e0f7fa;
+        }
+
+        iframe {
+            flex: 1;
+            border: none;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <h2>Hello,<br>Citizen </h2>
+       			 <a href="addComplaints.jsp" target="contentFrame"> Add Complaints </a>
+       			 
+       			 <a href="schemeDisplayCitizen.jsp" target="contentFrame"> View Schemes </a>
+       			 
+                <a href="citizenComplaintDisplay.jsp" target="contentFrame"> View Complaints </a>
+                
+                <a href="noticeDisplayCitizen.jsp" target="contentFrame"> View Notice </a>
+                
+                <a href="citizenResetPassword.jsp" target="contentFrame"> Reset Password </a>
+                
+                <a href="index.html" >Sign Out Here</a>
+                
+        
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="header">
+            <h1>Welcome Hello Citizen Here we are available for help of you</h1>
+        </div>
+        <iframe name="contentFrame"></iframe>
+    </div>
+
+</body>
+</html>
